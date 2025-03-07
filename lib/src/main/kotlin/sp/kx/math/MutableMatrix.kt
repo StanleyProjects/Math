@@ -2,6 +2,7 @@ package sp.kx.math
 
 import java.util.Objects
 
+@Suppress("ktlint:standard:parameter-list-wrapping")
 class MutableMatrix(
     override var m00: Double, override var m10: Double, override var m20: Double, override var m30: Double,
     override var m01: Double, override var m11: Double, override var m21: Double, override var m31: Double,
@@ -15,6 +16,7 @@ class MutableMatrix(
         m30 = 0.0, m31 = 0.0, m32 = 0.0, m33 = 0.0,
     )
 
+    @Suppress("ktlint:standard:indent")
     override fun equals(other: Any?): Boolean {
         return when (other) {
             is Matrix -> {
@@ -46,6 +48,7 @@ fun Matrix.mut(): MutableMatrix {
     )
 }
 
+@Suppress("ktlint:standard:wrapping")
 fun MutableMatrix.mul(other: Matrix) {
     val m00 = this.m00 * other.m00 + this.m01 * other.m10 + this.m02 * other.m20 + this.m03 * other.m30
     val m01 = this.m00 * other.m01 + this.m01 * other.m11 + this.m02 * other.m21 + this.m03 * other.m31

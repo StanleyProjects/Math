@@ -1,5 +1,6 @@
 package sp.kx.math
 
+@Suppress("ktlint:standard:wrapping")
 interface Matrix {
     val m00: Double; val m01: Double; val m02: Double; val m03: Double
     val m10: Double; val m11: Double; val m12: Double; val m13: Double
