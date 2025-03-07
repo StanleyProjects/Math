@@ -18,3 +18,7 @@ class MutableVertex(
         return Objects.hash(x, y, z)
     }
 }
+
+fun Vertex.mut(): MutableVertex {
+    return MutableVertex(x = x, y = y, z = z)
+}
