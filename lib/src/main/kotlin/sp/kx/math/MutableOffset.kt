@@ -18,3 +18,11 @@ class MutableOffset(
         return Objects.hash(dX, dY, dZ)
     }
 }
+
+fun Offset.mut(): MutableOffset {
+    return MutableOffset(
+        dX = dX,
+        dY = dY,
+        dZ = dZ,
+    )
+}
