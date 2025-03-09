@@ -17,3 +17,10 @@ class MutableSize(
         return Objects.hash(width, height)
     }
 }
+
+fun Size.mut(): MutableSize {
+    return MutableSize(
+        width = width,
+        height = height,
+    )
+}

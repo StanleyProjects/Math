@@ -49,7 +49,7 @@ fun Matrix.mut(): MutableMatrix {
 }
 
 @Suppress("ktlint:standard:wrapping")
-fun MutableMatrix.mul(other: Matrix) {
+operator fun MutableMatrix.timesAssign(other: Matrix) {
     val m00 = this.m00 * other.m00 + this.m01 * other.m10 + this.m02 * other.m20 + this.m03 * other.m30
     val m01 = this.m00 * other.m01 + this.m01 * other.m11 + this.m02 * other.m21 + this.m03 * other.m31
     val m02 = this.m00 * other.m02 + this.m01 * other.m12 + this.m02 * other.m22 + this.m03 * other.m32
